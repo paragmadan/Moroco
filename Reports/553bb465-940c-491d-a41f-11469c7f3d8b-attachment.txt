@@ -1,0 +1,3 @@
+https://interop-qp-oma.admin-paas-om-qualifr.itn.intraorange/edp1interophpstxn/v1/MA/technical%E2%80%90wallets
+{u'data': [{u'description': u'Channel User ', u'msisdn': u'1010101010', u'optional': None, u'channelUserCode': u'1111', u'creationDate': u'2020-04-29T08:17:22Z', u'type': u'CHANNEL_USER'}], u'metadata': None}
+TECHNICAL WALLET MSISDN: 1010101010

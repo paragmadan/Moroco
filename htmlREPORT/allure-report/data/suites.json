@@ -1,0 +1,39 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "TestCases",
+    "children" : [ {
+      "name" : "test_EDP1",
+      "children" : [ {
+        "name" : "test_gettechnicalwallet_FIN",
+        "uid" : "dc6204d7a7919e79",
+        "parentUid" : "6fb5d2ed0739c4740664f1820ae79ba4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589179349030,
+          "stop" : 1589179351901,
+          "duration" : 2871
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_createTransaction_FIN",
+        "uid" : "f6f8f1e65c5328e6",
+        "parentUid" : "6fb5d2ed0739c4740664f1820ae79ba4",
+        "status" : "broken",
+        "time" : {
+          "start" : 1589179351928,
+          "stop" : 1589179366939,
+          "duration" : 15011
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6fb5d2ed0739c4740664f1820ae79ba4"
+    } ],
+    "uid" : "0408d924bc3d43de55080f45620fd22e"
+  } ]
+}

@@ -1,0 +1,84 @@
+{
+  "uid" : "dc6204d7a7919e79",
+  "name" : "test_gettechnicalwallet_FIN",
+  "fullName" : "TestCases.test_EDP1#test_gettechnicalwallet_FIN",
+  "historyId" : "a7d1eda0dbe8cefdc43c4405d38fd31f",
+  "time" : {
+    "start" : 1589179349030,
+    "stop" : 1589179351901,
+    "duration" : 2871
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "fixture_FIN",
+    "time" : {
+      "start" : 1589179349015,
+      "stop" : 1589179349015,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "cfad69c129668786",
+      "name" : "stdout",
+      "source" : "cfad69c129668786.txt",
+      "type" : "text/plain",
+      "size" : 356
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_EDP1"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "host",
+    "value" : "EQ-EQ6286397"
+  }, {
+    "name" : "thread",
+    "value" : "28300-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython2"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_EDP1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "dc6204d7a7919e79.json",
+  "parameterValues" : [ ]
+}

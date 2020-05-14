@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'unicode' object has no attribute 'status_code'",
+      "children" : [ {
+        "name" : "test_createTransaction_FIN",
+        "uid" : "f6f8f1e65c5328e6",
+        "parentUid" : "a413a8b2bf3d3a4986de329817757a27",
+        "status" : "broken",
+        "time" : {
+          "start" : 1589179351928,
+          "stop" : 1589179366939,
+          "duration" : 15011
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a413a8b2bf3d3a4986de329817757a27"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

@@ -1,0 +1,92 @@
+{
+  "uid" : "f6f8f1e65c5328e6",
+  "name" : "test_createTransaction_FIN",
+  "fullName" : "TestCases.test_EDP1#test_createTransaction_FIN",
+  "historyId" : "921d60b2eafcdbcb0b850b34ece5ffd6",
+  "time" : {
+    "start" : 1589179351928,
+    "stop" : 1589179366939,
+    "duration" : 15011
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'unicode' object has no attribute 'status_code'",
+  "statusTrace" : "fixture_FIN = None\n\n    def test_createTransaction_FIN(fixture_FIN):\n        createtxnurl = url_fin + 'transactions/'\n    \n        # for i in range(0,1):                        #no. of transactions to be performed\n    \n        txnid = ''\n        fltxncor = open('txncorrfile.txt', 'w')\n        file = open(\"C:\\Users\\RZFW9607\\Desktop\\p2p_1_edp1.json\", 'r')\n        json_input = file.read()\n        req_json = json.loads(json_input)\n        xlobj = xl('C:\\\\Users\\\\RZFW9607\\\\Desktop\\\\createtxn.xlsx', 'Sheet1')\n        rows = xlobj.no_of_rows()\n        colms = xlobj.no_of_cols()\n        fl2 = open('C:\\\\Users\\\\RZFW9607\\\\Desktop\\\\smp.json', 'w')\n        fln = open('txnidfile.txt', 'w')\n        ls = xlobj.get_keys()\n    \n        # print(ls)\n    \n        print rows\n        for i in range(2, rows + 1):\n    \n            # print(\"i====================================================={}\".format(i))\n    \n            new_json_input = xlobj.get_data_per_row(req_json, i, ls)\n    \n            # new_json_input= json.loads(str(new_json_input))\n            # fl2.write(str(new_json_input))(\n            # print new_json_input\n            # new_json_input['creditParty']=str(new_json_input['creditParty'])\n            # print new_json_input['creditParty']\n            # print new_json_input\n    \n            print 'Request:' + str(new_json_input)\n            response = requests.post(createtxnurl, headers=headers,\n                                     json=new_json_input, verify=False)\n    \n            # print(response.status_code)\n    \n            print response.status_code\n            print 'Response' + response.content\n    \n            # print(response)\n    \n            response = response.text\n    \n            # print response\n    \n            out = json.loads(response)\n    \n            # print('asdasdadadasa')\n    \n            print out\n            assert out['code'] == 'INTEROP_50046' or out['code'] \\\n                   == 'BROKER_200', out['message']\n            assert out['status'] == 'TS', out['message']\n            interop_id = out['interopRefId']\n            print out['message']\n    \n            # assert(out[\"code\"]=='INTEROP_50046')\n    \n            # txnid=out[\"message\"]\n            # txnid=txnid[index:index+20]\n            # print('Transaction Id:'+txnid)\n    \n            myfl = 0\n            print 'Waiting to Generate Results ...'\n>           txnid, hps_id, edp2_txn_id = getTxnStatus(interop_id)\n\ntest_EDP1.py:235: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ninteropId = 'SL29-u3cL-cANG-YG2zT'\n\n    def getTxnStatus(interopId):\n        txnsuccess=0\n        getTxnStatususrl=url+'transactions/'+interopId+'/en'\n        time.sleep(10)\n        response=requests.get(getTxnStatususrl,headers=headers,verify=False)\n        response=response.text\n>       print response.status_code\nE       AttributeError: 'unicode' object has no attribute 'status_code'\n\nAdditionalscripts\\FINscripts\\gettxnstatus.py:16: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "fixture_FIN",
+    "time" : {
+      "start" : 1589179351926,
+      "stop" : 1589179351926,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'unicode' object has no attribute 'status_code'",
+    "statusTrace" : "fixture_FIN = None\n\n    def test_createTransaction_FIN(fixture_FIN):\n        createtxnurl = url_fin + 'transactions/'\n    \n        # for i in range(0,1):                        #no. of transactions to be performed\n    \n        txnid = ''\n        fltxncor = open('txncorrfile.txt', 'w')\n        file = open(\"C:\\Users\\RZFW9607\\Desktop\\p2p_1_edp1.json\", 'r')\n        json_input = file.read()\n        req_json = json.loads(json_input)\n        xlobj = xl('C:\\\\Users\\\\RZFW9607\\\\Desktop\\\\createtxn.xlsx', 'Sheet1')\n        rows = xlobj.no_of_rows()\n        colms = xlobj.no_of_cols()\n        fl2 = open('C:\\\\Users\\\\RZFW9607\\\\Desktop\\\\smp.json', 'w')\n        fln = open('txnidfile.txt', 'w')\n        ls = xlobj.get_keys()\n    \n        # print(ls)\n    \n        print rows\n        for i in range(2, rows + 1):\n    \n            # print(\"i====================================================={}\".format(i))\n    \n            new_json_input = xlobj.get_data_per_row(req_json, i, ls)\n    \n            # new_json_input= json.loads(str(new_json_input))\n            # fl2.write(str(new_json_input))(\n            # print new_json_input\n            # new_json_input['creditParty']=str(new_json_input['creditParty'])\n            # print new_json_input['creditParty']\n            # print new_json_input\n    \n            print 'Request:' + str(new_json_input)\n            response = requests.post(createtxnurl, headers=headers,\n                                     json=new_json_input, verify=False)\n    \n            # print(response.status_code)\n    \n            print response.status_code\n            print 'Response' + response.content\n    \n            # print(response)\n    \n            response = response.text\n    \n            # print response\n    \n            out = json.loads(response)\n    \n            # print('asdasdadadasa')\n    \n            print out\n            assert out['code'] == 'INTEROP_50046' or out['code'] \\\n                   == 'BROKER_200', out['message']\n            assert out['status'] == 'TS', out['message']\n            interop_id = out['interopRefId']\n            print out['message']\n    \n            # assert(out[\"code\"]=='INTEROP_50046')\n    \n            # txnid=out[\"message\"]\n            # txnid=txnid[index:index+20]\n            # print('Transaction Id:'+txnid)\n    \n            myfl = 0\n            print 'Waiting to Generate Results ...'\n>           txnid, hps_id, edp2_txn_id = getTxnStatus(interop_id)\n\ntest_EDP1.py:235: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ninteropId = 'SL29-u3cL-cANG-YG2zT'\n\n    def getTxnStatus(interopId):\n        txnsuccess=0\n        getTxnStatususrl=url+'transactions/'+interopId+'/en'\n        time.sleep(10)\n        response=requests.get(getTxnStatususrl,headers=headers,verify=False)\n        response=response.text\n>       print response.status_code\nE       AttributeError: 'unicode' object has no attribute 'status_code'\n\nAdditionalscripts\\FINscripts\\gettxnstatus.py:16: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "d77632cefdfe24e3",
+      "name" : "stdout",
+      "source" : "d77632cefdfe24e3.txt",
+      "type" : "text/plain",
+      "size" : 1774
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 1
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_EDP1"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "host",
+    "value" : "EQ-EQ6286397"
+  }, {
+    "name" : "thread",
+    "value" : "28300-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython2"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_EDP1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f6f8f1e65c5328e6.json",
+  "parameterValues" : [ ]
+}

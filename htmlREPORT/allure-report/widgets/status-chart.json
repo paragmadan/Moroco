@@ -1,0 +1,21 @@
+[ {
+  "uid" : "f6f8f1e65c5328e6",
+  "name" : "test_createTransaction_FIN",
+  "time" : {
+    "start" : 1589179351928,
+    "stop" : 1589179366939,
+    "duration" : 15011
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "dc6204d7a7919e79",
+  "name" : "test_gettechnicalwallet_FIN",
+  "time" : {
+    "start" : 1589179349030,
+    "stop" : 1589179351901,
+    "duration" : 2871
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

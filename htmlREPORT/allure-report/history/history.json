@@ -1,0 +1,41 @@
+{
+  "a7d1eda0dbe8cefdc43c4405d38fd31f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "dc6204d7a7919e79",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589179349030,
+        "stop" : 1589179351901,
+        "duration" : 2871
+      }
+    } ]
+  },
+  "921d60b2eafcdbcb0b850b34ece5ffd6" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f6f8f1e65c5328e6",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'unicode' object has no attribute 'status_code'",
+      "time" : {
+        "start" : 1589179351928,
+        "stop" : 1589179366939,
+        "duration" : 15011
+      }
+    } ]
+  }
+}
